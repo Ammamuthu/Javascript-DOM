@@ -1,0 +1,57 @@
+<style>
+    table {
+        border: 1px solid black;
+        padding: 5px;
+    }
+</style>
+
+<h1>student's Form</h1>
+
+<label > NAME</label> <input type="text"  id="name"><br><br>
+<label > Age</label>    <input type="number" id="age"> <br><br>
+<label > Gender</label> 
+<input type="radio" id="male" value="Male"><label for="male">Male</label>
+<input type="radio" id="female" value="Female"><label for="female">Female</label><br> <br>
+<label > Course</label> <input type="text" id="course"> <br><br>
+<label > Email</label> <input type="mail" id="mail"><br><br><br>
+<button onclick="save()"> Save </button>
+<hr>
+
+<h1>ForM ViewPoint</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>Email</th>
+        <th>Option</th>
+    </tr>
+    <tr id="data">
+
+    </tr>
+</table>
+
+<script>
+
+    let tr_name = []
+
+    let a = document.getElementById('name')
+    let b = document.getElementById('age')
+    let mal = document.getElementById ('male')
+    let fem = document.getElementById('female')
+    let c = document.getElementById('course')
+    let d = document.getElementById('mail')
+    let data = document.getElementById('data')
+
+    function save(){
+        let tr_name =  document.createElement('td')
+
+        tr_name.textContent = a.value;
+        tr_name.textContent = b.value;
+
+        data.append(tr_name)
+        
+    }
+</script>

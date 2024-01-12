@@ -1,0 +1,16 @@
+<div id="one">
+    <h1>John</h1>
+</div>
+
+<script>
+    let a = document.querySelector('div') // don't use unnesseryly queryselector ALL
+    a.append("byee")
+    a.prepend("hello")
+
+    var b = document.createElement("h1")  // cReate an empty html tag
+    b.textContent = "hello000000000000"
+
+
+    a.insertAdjacentElement("beforebegin" , b)
+    a.insertAdjacentElement("afterend",b)
+</script>

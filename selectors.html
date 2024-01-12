@@ -1,0 +1,36 @@
+<!-- We're using query selector this is used to select all tag , id , class -->
+<div class="one" id="one">
+    <h1>Heloo</h1>
+</div>
+
+<!-- part two -->
+    <h1 id="sum">one</h1>
+    <h1 id="sum">two</h1>
+    <h1 id="sum">three</h1>
+
+
+<script>
+    var a = document.querySelector('.one');  // select using  by class
+    console.log(a)
+    var b = document.querySelector('h1');   // select using by tag
+    console.log(b)
+    var c = document.querySelector('#one'); // select using by a id
+    console.log(c)
+
+
+
+
+    //part two
+
+    var sum = document.querySelector('#sum');  // default it has multiple means it only give 1 one 
+    console.log(sum)
+
+    var sum1 = document.querySelectorAll('#sum')   /// all  tag can able to print all at node at once but in array 
+    console.log(sum1)
+
+    //Go to array.js
+    for (i=0;i<sum1.length;i++){
+       // console.log(sum1[i])
+        console.log(sum1[i].textContent)
+    }
+</script>

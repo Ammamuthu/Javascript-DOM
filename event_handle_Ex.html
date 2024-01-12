@@ -1,0 +1,19 @@
+<input id="num1">
+<input id="num2">
+
+<p id="result"></p>
+
+<button onclick="adding()"> Add</button>
+
+<script>
+
+
+    function adding() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+        let c = Number(a) + Number(b)
+        let ans = document.getElementById('result')
+        ans.textContent = c
+    }
+    
+</script>

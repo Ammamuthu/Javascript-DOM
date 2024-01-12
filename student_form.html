@@ -1,0 +1,52 @@
+<style>
+    table {
+        border: 1px solid black;
+        padding: 5px;
+    }
+</style>
+
+<h1>student's Form</h1>
+
+<label> NAME</label> <input type="text" id="name"><br><br>
+<label> Age</label> <input type="number" id="age"> <br><br>
+<label> Gender</label>
+<input type="radio" id="male" value="Male"><label for="male">Male</label>
+<input type="radio" id="female" value="Female"><label for="female">Female</label><br><br>
+<label> Course</label> <input type="text" id="course"> <br><br>
+<label> Email</label> <input type="mail" id="mail"><br><br><br>
+<button onclick="save()"> Save </button>
+<hr>
+
+<h1>ForM ViewPoint</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>Email</th>
+        <th>Option</th>
+    </tr>
+    <tr id="data">
+
+    </tr>
+</table>
+
+<script>
+    let a = document.querySelectorAll('input');
+    let dat = document.getElementById("data")
+
+    function save() {
+        for (i = 0; i < a.length; i++) {
+            let cont = document.createElement('td')
+            cont.textContent = a[i].value
+            dat.append(cont)
+        }
+        for (j = 0; j < a.length; j++) {
+            a.value='';
+        }
+
+    }
+
+</script>

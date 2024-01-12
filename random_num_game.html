@@ -1,0 +1,33 @@
+<input type="number" id="box"> <button onclick="check()"> CHeck</button>
+
+<p id="point">Your score is 10 </p>
+
+<h1 id="status"></h1>
+
+<script>
+    let score = 10
+    let ran = Math.random()
+    let ans = (Math.floor(10 * ran + 1))
+    console.log(ans)
+    function check() {
+
+
+        let a = document.getElementById('box').value
+
+        if (a == ans) {
+            document.getElementById('status').textContent = "You won !!";
+            alert("you won the game ")
+     
+        }
+        else if (a != ans) {
+            document.getElementById('status').textContent = "Ohoo okey make another try ";
+            document.getElementById('point').textContent = "yyour score is "+ score--;
+
+            if ( score == 0){
+                document.getElementById("point").textContent = " Sorry bro you tried your best "
+                alert("Score drained ☢")
+            }
+        }
+
+    }
+</script>

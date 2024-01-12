@@ -1,0 +1,27 @@
+<style>
+    #box{
+        width: 100px;
+        height: 100px;
+        background-color: black    ;
+    }
+
+    .widthinc{
+        width: 800px;
+        transition: 2s;
+    }
+</style>
+
+
+<div id="box">
+</div>
+
+<button onclick="changer()"> Click </button>
+
+<script>
+    // change color function
+    function changer(){
+        let a  = document.getElementById("box")
+        a.style.backgroundColor = "blue";   
+        a.setAttribute("class","widthinc")
+    }
+</script>

@@ -1,0 +1,15 @@
+<!-- Task one Type back from the tsext back  -->
+
+<input type="text" id="typer" onkeydown="fun()"> 
+<!-- This key function is used to do the exersice onkey  -->
+<!-- <button onclick="fun()">click</button> -->
+<h1 id="printer"></h1>
+
+<script>
+    
+    function fun(){
+        let a = document.getElementById('typer').value;
+        document.getElementById('printer').textContent=a;
+    }
+    
+</script>

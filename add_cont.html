@@ -1,0 +1,20 @@
+<!-- task2 if we click the button it add a content one by one -->
+
+<button onclick="print()"> add Puchuk</button>
+<div id="cont"></div>
+
+<script>
+    // accessing a div tag
+    let a = document.getElementById('cont')
+    function print(){
+       // createing a h1 tag
+        let b=document.createElement('h1')
+      //add this content to inside a h1 tag
+        b.textContent = "hello"
+      // append the above content inside a another div
+        a.append(b)
+        
+    
+    }
+
+</script> 

@@ -1,0 +1,46 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    body{
+        background: linear-gradient(
+    to right,
+    pink 0%,
+    pink 50%,
+    paleturquoise 50%,
+    paleturquoise 100%
+  );
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  left: 40%;
+    }
+    
+    button{
+        border: none;
+        padding: 5px;
+        background-color: #FC6C85;
+        color: aliceblue;
+    }
+</style>
+
+<input type="text" id="val">  <button onclick="sumbit()">Add</button>
+
+<p>You canm Add your daily task right here ...</p>
+
+
+<ul id="list" style="list-style: none;">
+
+</ul>
+
+<script>
+    let a = document.getElementById('val')
+    let b = document.getElementById('list')
+
+    function sumbit(){
+        let elem = document.createElement("li")
+        elem.innerHTML = a.value + " <button onclick='erase(event)'> ❌ </button>"
+        b.append(elem)
+    }
+    function erase(event){
+        event.target.parentElement.remove()
+    }
+</script>

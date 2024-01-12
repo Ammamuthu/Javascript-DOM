@@ -1,0 +1,13 @@
+<h1 id="cont">---------</h1>
+<!-- Event passing a object -->
+<button onclick="clike(event)">john</button>
+<button onclick="clike(event)">parallel</button>
+<button onclick="clike(event)">world</button>
+
+<script>
+    let a = document.getElementById('cont')
+    function clike(event){
+        // inside a event.taget. inside textcONTECT
+        a.textContent=event.target.textContent
+    }
+</script>
